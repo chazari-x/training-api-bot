@@ -105,7 +105,7 @@ func (h *Handler) commandHelp(s *discordgo.Session, i *discordgo.InteractionCrea
 		}
 	} else {
 		embed.Title = "Список команд"
-		embed.Description = fmt.Sprintf("Здравствуй, пользователь! Я - бот дискорд сообщества .chazari, мое имя %s. Я готов помочь тебе с информацией о доступных командах. Вот некоторые из них:", h.bot.State.User.Username)
+		embed.Description = fmt.Sprintf("Здравствуй, пользователь! Я - бот дискорд сообщества [.chazari](https://chazari.ru), мое имя %s. Я готов помочь тебе с информацией о доступных командах. Вот некоторые из них:", h.bot.State.User.Username)
 		for _, applicationCommand := range commands {
 			field := &discordgo.MessageEmbedField{
 				Name: fmt.Sprintf("/%s", applicationCommand.Name),

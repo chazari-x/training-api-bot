@@ -1,6 +1,6 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-green)](https://github.com/chazari-x/training-api-bot)
 [![Docker Hub](https://img.shields.io/badge/Docker%20Hub-chazari%2Ftraining--api-blue)](https://hub.docker.com/r/chazari/training-api)
-[![Discord](https://img.shields.io/badge/Discord-Server-blue)](https://discord.gg/xpNyuPQh8R)
+[![Discord](https://img.shields.io/badge/Discord-Server-blue)](https://chazari.ru)
 
 # Discord API Training Bot
 

@@ -1,6 +1,6 @@
 # Discord API Training Bot
 
-Этот Discord бот предназначен для взаимодействия с API сервера Training в игре SA-MP (San Andreas Multiplayer) через Discord.
+Этот Discord бот предназначен для взаимодействия с API сервера Training в игре SA-MP (San Andreas Multiplayer).
 
 ## Описание
 

@@ -1,0 +1,9 @@
+log:
+    level: trace
+bot:
+    prefix: ""
+    channel:
+        log: "1180433142176292964"
+        do_log: "1180433395566776430"
+urls:
+    training: https://training-server.com/api

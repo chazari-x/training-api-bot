@@ -1,0 +1,5 @@
+/.idea
+/vendor
+*dev.yaml
+*.yml
+!*example.yml

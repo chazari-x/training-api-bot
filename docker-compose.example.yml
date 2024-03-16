@@ -1,0 +1,7 @@
+version: '3'
+services:
+  discord-api-training-bot:
+    container_name: discord-api-training-bot
+    image: "chazari/training-api:latest"
+    restart: always
+    command: ["/app/main", "discord", "--token=your-discord-bot-token"]

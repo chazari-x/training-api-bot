@@ -1,3 +1,7 @@
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-green)](https://github.com/chazari-x/training-api-bot)
+[![Docker Hub](https://img.shields.io/badge/Docker%20Hub-chazari%2Ftraining--api-blue)](https://hub.docker.com/r/chazari/training-api)
+[![Discord](https://img.shields.io/badge/Discord-Server-blue)](https://discord.gg/xpNyuPQh8R)
+
 # Discord API Training Bot
 
 Этот Discord бот предназначен для взаимодействия с API сервера Training в игре SA-MP (San Andreas Multiplayer).
@@ -47,4 +51,4 @@ docker-compose up -d
 
 ## Лицензия
 
-Этот проект лицензируется по лицензии GNU General Public License v3.0. См. файл [LICENSE](LICENSE) для получения дополнительной информации.
+Этот проект лицензируется по лицензии GNU General Public License v3.0. См. файл [LICENSE](https://github.com/chazari-x/training-api-bot/blob/master/LICENSE) для получения дополнительной информации.

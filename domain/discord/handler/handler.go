@@ -155,6 +155,20 @@ func (h *Handler) commandApiTrainingUser(s *discordgo.Session, i *discordgo.Inte
 			return
 		}
 
+		if stats.Data.Login == "" {
+			response.Data.Flags = discordgo.MessageFlagsEphemeral
+			response.Data.Content = "Такой аккаунт не найден!"
+			if err := s.InteractionRespond(i.Interaction, response); h.log.Error(err, "Такой аккаунт не найден!", func() uintptr {
+				pc, _, _, _ := runtime.Caller(0)
+				return pc
+			}()) {
+				h.sendCommandError(s, i)
+				return
+			}
+			h.deleteAnswer(s, i)
+			return
+		}
+
 		embed := &discordgo.MessageEmbed{
 			Title:  fmt.Sprintf("Информация аккаунта %s #%d", stats.Data.Login, stats.Data.ID),
 			Color:  0xffffff,
@@ -198,7 +212,7 @@ func (h *Handler) commandApiTrainingUser(s *discordgo.Session, i *discordgo.Inte
 		}
 
 		embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
-			Name:   "**\t\t\t\t\t\t\t\t\tАктивность аккаунта:**",
+			Name:   "**Активность аккаунта:**",
 			Inline: false,
 		}, &discordgo.MessageEmbedField{
 			Name:   "Дата регистрации:",
@@ -219,7 +233,7 @@ func (h *Handler) commandApiTrainingUser(s *discordgo.Session, i *discordgo.Inte
 
 		if len(stats.Data.Warn) > 0 {
 			embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
-				Name:   "**\t\t\t\t\t\t\t\tСписок предупреждений:**",
+				Name:   "**Список предупреждений:**",
 				Inline: false,
 			})
 			for _, w := range stats.Data.Warn {
